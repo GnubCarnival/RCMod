@@ -987,7 +987,7 @@ class HERO : Photon.MonoBehaviour
     {
         if (((this.dashTime <= 0f) && (this.currentGas > 0f)) && !this.isMounted && _dashCooldownLeft <= 0f)
         {
-            this.useGas(this.totalGas * 0.04f);
+            this.useGas(this.totalGas * -0.04f);
             this.facingDirection = this.getGlobalFacingDirection(horizontal, vertical);
             this.dashV = this.getGlobaleFacingVector3(this.facingDirection);
             this.originVM = this.currentSpeed;
@@ -5611,7 +5611,7 @@ class HERO : Photon.MonoBehaviour
     {
         if (amount == 0)
         {
-            amount = 1;
+            amount = -1;
         }
         amount *= 2;
         if (this.currentBladeSta > 0f)
